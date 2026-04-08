@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hill Climbing Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+<h2>Hill Climbing Visualizer</h2>
+
+<div class="input-row">
+    <input id="func" placeholder="e.g. sin(x) + x^2" />
+    <input id="xmin" type="number" placeholder="Min X" />
+    <input id="xmax" type="number" placeholder="Max X" />
+    <select id="mode">
+        <option value="max">Maximum</option>
+        <option value="min">Minimum</option>
+    </select>
+    <button onclick="start()">Start</button>
+</div>
+
+<div id="graph" style="width:90%;height:500px;margin:20px auto;"></div>
+
+<div id="resultBox">
+    <h3>Result</h3>
+    <p id="resultText">No result yet</p>
+</div>
+
+<script src="parser.js"></script>
+<script src="hillClimb.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
